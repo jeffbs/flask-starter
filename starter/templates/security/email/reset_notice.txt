@@ -1,5 +1,0 @@
-{% extends "security/email/base.txt" %}
-
-{% block content -%}
-Your password has been reset
-{%- endblock %}
