@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Builds
+dist/
+build/
+.expo/
+web-build/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Uploads (dev file storage)
+apps/api/uploads/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / Editor
+.DS_Store
+.idea/
+.vscode/
+
+# Prisma
+apps/api/prisma/*.db
+
+# Expo
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision

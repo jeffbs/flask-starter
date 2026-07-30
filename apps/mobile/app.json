@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "B2BMarkt",
+    "slug": "b2bmarkt",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "b2bmarkt",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.b2bmarkt.app"
+    },
+    "android": {
+      "package": "com.b2bmarkt.app",
+      "edgeToEdgeEnabled": true
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-notifications"
+    ],
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}

@@ -1,0 +1,299 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ---------------------------------------------------------------------------
+// Firmen & Nutzer
+// ---------------------------------------------------------------------------
+
+enum CompanyStatus {
+  UNVERIFIED // registriert, KYB noch nicht eingereicht
+  PENDING_REVIEW // KYB eingereicht, wartet auf manuelle Freigabe
+  VERIFIED // freigegeben, darf inserieren & handeln
+  REJECTED // KYB abgelehnt (Grund in rejectionReason)
+  SUSPENDED // vom Admin gesperrt
+}
+
+enum UserRole {
+  OWNER // Firmeninhaber-Konto
+  MEMBER // Mitarbeiterkonto
+  ADMIN // Backoffice, keiner Firma zugeordnet
+}
+
+model Company {
+  id                 String        @id @default(cuid())
+  name               String
+  legalForm          String? // z.B. GmbH, UG, e.K.
+  vatId              String?       @unique // USt-IdNr.
+  registrationNumber String? // Handelsregisternummer
+  registrationCourt  String? // Registergericht
+  street             String?
+  zip                String?
+  city               String?
+  country            String        @default("DE")
+  phone              String?
+  website            String?
+  description        String?
+  status             CompanyStatus @default(UNVERIFIED)
+  rejectionReason    String?
+  verifiedAt         DateTime?
+  createdAt          DateTime      @default(now())
+  updatedAt          DateTime      @updatedAt
+
+  users              User[]
+  listings           Listing[]
+  kybDocuments       KybDocument[]
+  buyerConversations Conversation[] @relation("BuyerConversations")
+  sellerConversations Conversation[] @relation("SellerConversations")
+  reports            Report[]       @relation("ReportedCompany")
+}
+
+model User {
+  id           String    @id @default(cuid())
+  email        String    @unique
+  passwordHash String
+  firstName    String
+  lastName     String
+  role         UserRole  @default(OWNER)
+  isActive     Boolean   @default(true)
+  companyId    String?
+  company      Company?  @relation(fields: [companyId], references: [id])
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  listings   Listing[]  @relation("CreatedListings")
+  favorites  Favorite[]
+  messages   Message[]
+  pushTokens PushToken[]
+  reports    Report[]   @relation("ReporterUser")
+  auditLogs  AuditLog[]
+  kybDocuments KybDocument[]
+}
+
+enum KybDocumentType {
+  TRADE_REGISTER // Handelsregisterauszug
+  VAT_CERTIFICATE // USt-Bescheinigung
+  BUSINESS_LICENSE // Gewerbeanmeldung
+  ID_DOCUMENT
+  OTHER
+}
+
+model KybDocument {
+  id           String          @id @default(cuid())
+  companyId    String
+  company      Company         @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  uploadedById String
+  uploadedBy   User            @relation(fields: [uploadedById], references: [id])
+  type         KybDocumentType
+  fileUrl      String
+  fileName     String
+  createdAt    DateTime        @default(now())
+}
+
+// ---------------------------------------------------------------------------
+// Kategorien & Inserate
+// ---------------------------------------------------------------------------
+
+model Category {
+  id        String     @id @default(cuid())
+  name      String
+  slug      String     @unique
+  parentId  String?
+  parent    Category?  @relation("CategoryTree", fields: [parentId], references: [id])
+  children  Category[] @relation("CategoryTree")
+  sortOrder Int        @default(0)
+  isActive  Boolean    @default(true)
+  listings  Listing[]
+}
+
+enum PriceType {
+  FIXED // Festpreis
+  NEGOTIABLE // VB
+  ON_REQUEST // Preis auf Anfrage
+}
+
+enum Condition {
+  NEW
+  LIKE_NEW
+  USED
+  DEFECT
+}
+
+enum ListingStatus {
+  DRAFT
+  ACTIVE
+  PAUSED // vom Inserenten deaktiviert
+  SOLD
+  EXPIRED
+  REMOVED // vom Admin entfernt (Grund in moderationNote)
+}
+
+model Listing {
+  id             String        @id @default(cuid())
+  companyId      String
+  company        Company       @relation(fields: [companyId], references: [id])
+  createdById    String
+  createdBy      User          @relation("CreatedListings", fields: [createdById], references: [id])
+  categoryId     String
+  category       Category      @relation(fields: [categoryId], references: [id])
+  title          String
+  description    String
+  priceCents     Int?
+  priceType      PriceType     @default(NEGOTIABLE)
+  isNetPrice     Boolean       @default(true) // B2B: Preise i.d.R. netto
+  condition      Condition?
+  quantity       Int           @default(1)
+  unit           String? // z.B. Stück, Palette, Tonne
+  zip            String
+  city           String
+  country        String        @default("DE")
+  lat            Float?
+  lng            Float?
+  status         ListingStatus @default(ACTIVE)
+  moderationNote String?
+  viewCount      Int           @default(0)
+  publishedAt    DateTime?
+  expiresAt      DateTime?
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+
+  images        ListingImage[]
+  favorites     Favorite[]
+  conversations Conversation[]
+  reports       Report[]       @relation("ReportedListing")
+
+  @@index([status, categoryId])
+  @@index([status, createdAt])
+  @@index([companyId])
+}
+
+model ListingImage {
+  id        String  @id @default(cuid())
+  listingId String
+  listing   Listing @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  url       String
+  sortOrder Int     @default(0)
+}
+
+model Favorite {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  listingId String
+  listing   Listing  @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@unique([userId, listingId])
+}
+
+// ---------------------------------------------------------------------------
+// Chat & Preisvorschläge
+// ---------------------------------------------------------------------------
+
+model Conversation {
+  id              String   @id @default(cuid())
+  listingId       String
+  listing         Listing  @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  buyerCompanyId  String
+  buyerCompany    Company  @relation("BuyerConversations", fields: [buyerCompanyId], references: [id])
+  sellerCompanyId String
+  sellerCompany   Company  @relation("SellerConversations", fields: [sellerCompanyId], references: [id])
+  buyerLastReadAt  DateTime?
+  sellerLastReadAt DateTime?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  messages Message[]
+
+  @@unique([listingId, buyerCompanyId])
+}
+
+enum MessageType {
+  TEXT
+  OFFER // Preisvorschlag
+  SYSTEM
+}
+
+enum OfferStatus {
+  PENDING
+  ACCEPTED
+  DECLINED
+  WITHDRAWN
+}
+
+model Message {
+  id               String       @id @default(cuid())
+  conversationId   String
+  conversation     Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  senderUserId     String
+  sender           User         @relation(fields: [senderUserId], references: [id])
+  type             MessageType  @default(TEXT)
+  body             String?
+  offerAmountCents Int?
+  offerStatus      OfferStatus?
+  createdAt        DateTime     @default(now())
+
+  reports Report[] @relation("ReportedMessage")
+
+  @@index([conversationId, createdAt])
+}
+
+// ---------------------------------------------------------------------------
+// Meldungen, Push, Audit
+// ---------------------------------------------------------------------------
+
+enum ReportTargetType {
+  LISTING
+  COMPANY
+  MESSAGE
+}
+
+enum ReportStatus {
+  OPEN
+  RESOLVED
+  DISMISSED
+}
+
+model Report {
+  id             String           @id @default(cuid())
+  targetType     ReportTargetType
+  listingId      String?
+  listing        Listing?         @relation("ReportedListing", fields: [listingId], references: [id], onDelete: SetNull)
+  companyId      String?
+  company        Company?         @relation("ReportedCompany", fields: [companyId], references: [id], onDelete: SetNull)
+  messageId      String?
+  message        Message?         @relation("ReportedMessage", fields: [messageId], references: [id], onDelete: SetNull)
+  reporterUserId String
+  reporter       User             @relation("ReporterUser", fields: [reporterUserId], references: [id])
+  reason         String
+  details        String?
+  status         ReportStatus     @default(OPEN)
+  resolutionNote String?
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+}
+
+model PushToken {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  token     String   @unique
+  platform  String? // ios | android
+  createdAt DateTime @default(now())
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  adminId    String
+  admin      User     @relation(fields: [adminId], references: [id])
+  action     String // z.B. company.verify, listing.remove
+  targetType String
+  targetId   String
+  note       String?
+  createdAt  DateTime @default(now())
+}

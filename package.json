@@ -1,0 +1,21 @@
+{
+  "name": "b2bmarkt",
+  "version": "0.1.0",
+  "private": true,
+  "description": "B2B-Kleinanzeigen-Marktplatz: Mobile App + Backoffice + API",
+  "workspaces": [
+    "apps/api",
+    "apps/backoffice",
+    "apps/mobile"
+  ],
+  "scripts": {
+    "dev:api": "npm run dev --workspace apps/api",
+    "dev:backoffice": "npm run dev --workspace apps/backoffice",
+    "dev:mobile": "npm run start --workspace apps/mobile",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
