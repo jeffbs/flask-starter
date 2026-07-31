@@ -8,7 +8,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "@types/react": "~19.0.10",
+    "@vitest/coverage-v8": "^4.1.10",
     "typescript": "~5.8.3",
     "vitest": "^4.1.10"
   }

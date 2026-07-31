@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1785505698918" clover="3.2.0">
+  <project timestamp="1785505698918" name="All files">
+    <metrics statements="57" coveredstatements="57" conditionals="51" coveredconditionals="51" methods="17" coveredmethods="17" elements="125" coveredelements="125" complexity="0" loc="57" ncloc="57" packages="1" files="2" classes="2"/>
+    <file name="api.ts" path="/home/user/flask-starter/apps/mobile/src/api.ts">
+      <metrics statements="34" coveredstatements="34" conditionals="29" coveredconditionals="29" methods="13" coveredmethods="13"/>
+      <line num="3" count="1" type="cond" truecount="2" falsecount="0"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="14" count="7" type="stmt"/>
+      <line num="15" count="7" type="stmt"/>
+      <line num="19" count="15" type="stmt"/>
+      <line num="20" count="15" type="stmt"/>
+      <line num="24" count="3" type="stmt"/>
+      <line num="29" count="6" type="stmt"/>
+      <line num="31" count="6" type="stmt"/>
+      <line num="32" count="6" type="stmt"/>
+      <line num="34" count="6" type="stmt"/>
+      <line num="39" count="1" type="stmt"/>
+      <line num="41" count="1" type="stmt"/>
+      <line num="42" count="1" type="stmt"/>
+      <line num="49" count="7" type="stmt"/>
+      <line num="57" count="7" type="cond" truecount="4" falsecount="0"/>
+      <line num="58" count="2" type="stmt"/>
+      <line num="59" count="2" type="stmt"/>
+      <line num="61" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="62" count="4" type="stmt"/>
+      <line num="67" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="69" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="70" count="2" type="stmt"/>
+      <line num="79" count="3" type="stmt"/>
+      <line num="81" count="3" type="stmt"/>
+      <line num="82" count="3" type="stmt"/>
+      <line num="87" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="88" count="2" type="stmt"/>
+      <line num="89" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="91" count="1" type="stmt"/>
+      <line num="95" count="2" type="cond" truecount="2" falsecount="0"/>
+    </file>
+    <file name="format.ts" path="/home/user/flask-starter/apps/mobile/src/format.ts">
+      <metrics statements="23" coveredstatements="23" conditionals="22" coveredconditionals="22" methods="4" coveredmethods="4"/>
+      <line num="5" count="4" type="stmt"/>
+      <line num="6" count="4" type="stmt"/>
+      <line num="7" count="4" type="stmt"/>
+      <line num="18" count="4" type="cond" truecount="4" falsecount="0"/>
+      <line num="19" count="2" type="stmt"/>
+      <line num="21" count="2" type="stmt"/>
+      <line num="22" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="23" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="24" count="4" type="stmt"/>
+      <line num="29" count="6" type="stmt"/>
+      <line num="30" count="6" type="stmt"/>
+      <line num="31" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="32" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="33" count="4" type="stmt"/>
+      <line num="34" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="35" count="3" type="stmt"/>
+      <line num="36" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="37" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="38" count="1" type="stmt"/>
+      <line num="42" count="1" type="stmt"/>
+      <line num="45" count="1" type="stmt"/>
+      <line num="52" count="1" type="stmt"/>
+      <line num="61" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

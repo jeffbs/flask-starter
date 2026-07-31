@@ -9,5 +9,17 @@ export default defineConfig({
     pool: 'forks',
     testTimeout: 15000,
     hookTimeout: 30000,
+    coverage: {
+      provider: 'v8',
+      include: ['src/**'],
+      // Reiner Prozess-Einstieg (listen + exit) — kein testbarer Code
+      exclude: ['src/server.ts'],
+      thresholds: {
+        statements: 98,
+        lines: 98,
+        functions: 98,
+        branches: 92,
+      },
+    },
   },
 });
