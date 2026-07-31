@@ -10,6 +10,7 @@ import {
 } from './helpers/factories.js';
 import { prisma } from '../src/db.js';
 import { buildApp } from '../src/app.js';
+import { expireOverdueListings } from '../src/lib/expiry.js';
 
 beforeEach(truncateAll);
 afterAll(closeApp);
@@ -322,6 +323,78 @@ describe('Inserats-Ränder', () => {
       headers: { authorization: `Bearer ${viewer.token}` },
     });
     expect(desc.json().items[0].priceCents).toBe(200);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Ablauf nach Laufzeit (INS-5)
+// ---------------------------------------------------------------------------
+
+describe('Inserats-Laufzeit', () => {
+  it('INS-5: überfällige Inserate erscheinen nicht in der Suche, auch vor dem Sweep', async () => {
+    const app = await getApp();
+    const viewer = await createActor();
+    const listing = await createListing();
+    await prisma.listing.update({
+      where: { id: listing.id },
+      data: { expiresAt: new Date(Date.now() - 1000) },
+    });
+    const res = await app.inject({
+      method: 'GET',
+      url: '/api/listings',
+      headers: { authorization: `Bearer ${viewer.token}` },
+    });
+    expect(res.json().total).toBe(0);
+  });
+
+  it('INS-5: der Sweep markiert überfällige aktive Inserate als EXPIRED', async () => {
+    const overdue = await createListing();
+    const current = await createListing();
+    const paused = await createListing({ status: 'PAUSED' });
+    await prisma.listing.updateMany({
+      where: { id: { in: [overdue.id, paused.id] } },
+      data: { expiresAt: new Date(Date.now() - 1000) },
+    });
+    const count = await expireOverdueListings();
+    expect(count).toBe(1); // nur das aktive überfällige, PAUSED bleibt unangetastet
+    expect((await prisma.listing.findUniqueOrThrow({ where: { id: overdue.id } })).status).toBe('EXPIRED');
+    expect((await prisma.listing.findUniqueOrThrow({ where: { id: current.id } })).status).toBe('ACTIVE');
+    expect((await prisma.listing.findUniqueOrThrow({ where: { id: paused.id } })).status).toBe('PAUSED');
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Kontakt-Telefon am Inserat (UI-Brief §6.4)
+// ---------------------------------------------------------------------------
+
+describe('Kontakt-Telefon', () => {
+  it('INS-2: optionale Telefonnummer wird gespeichert und im Detail geliefert', async () => {
+    const app = await getApp();
+    const { token } = await createActor();
+    const category = await createCategory();
+    const created = await app.inject({
+      method: 'POST',
+      url: '/api/listings',
+      headers: { authorization: `Bearer ${token}` },
+      payload: {
+        categoryId: category.id,
+        title: 'Anhänger mit Rückrufnummer',
+        description: 'Bei Fragen gerne direkt anrufen, werktags 8-17 Uhr.',
+        priceCents: 250000,
+        zip: '44145',
+        city: 'Dortmund',
+        contactPhone: '+49 231 555 0100',
+      },
+    });
+    expect(created.statusCode).toBe(201);
+    expect(created.json().listing.contactPhone).toBe('+49 231 555 0100');
+    const viewer = await createActor();
+    const detail = await app.inject({
+      method: 'GET',
+      url: `/api/listings/${created.json().listing.id}`,
+      headers: { authorization: `Bearer ${viewer.token}` },
+    });
+    expect(detail.json().listing.contactPhone).toBe('+49 231 555 0100');
   });
 });
 

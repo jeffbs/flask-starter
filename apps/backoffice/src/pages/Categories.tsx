@@ -51,6 +51,19 @@ export default function Categories() {
     onSuccess: invalidate,
   });
 
+  const rename = useMutation({
+    mutationFn: ({ id, name }: { id: string; name: string }) =>
+      api(`/api/admin/categories/${id}`, { method: 'PATCH', body: { name } }),
+    onSuccess: invalidate,
+  });
+
+  function onRename(c: CategoryRow) {
+    const name = window.prompt('Neuer Name für die Kategorie:', c.name);
+    if (name && name.trim().length >= 2 && name.trim() !== c.name) {
+      rename.mutate({ id: c.id, name: name.trim() });
+    }
+  }
+
   function onSubmit(e: FormEvent) {
     e.preventDefault();
     if (!name.trim()) return;
@@ -72,12 +85,17 @@ export default function Categories() {
           <span className={`badge ${c.isActive ? 'ACTIVE' : 'REMOVED'}`}>{c.isActive ? 'Aktiv' : 'Inaktiv'}</span>
         </td>
         <td>
-          <button
-            className="secondary"
-            onClick={() => toggle.mutate({ id: c.id, isActive: !c.isActive })}
-          >
-            {c.isActive ? 'Deaktivieren' : 'Aktivieren'}
-          </button>
+          <div className="actions" style={{ margin: 0 }}>
+            <button className="secondary" onClick={() => onRename(c)}>
+              Umbenennen
+            </button>
+            <button
+              className="secondary"
+              onClick={() => toggle.mutate({ id: c.id, isActive: !c.isActive })}
+            >
+              {c.isActive ? 'Deaktivieren' : 'Aktivieren'}
+            </button>
+          </div>
         </td>
       </tr>
     );

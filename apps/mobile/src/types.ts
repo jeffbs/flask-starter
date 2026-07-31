@@ -63,6 +63,7 @@ export interface ListingRowData {
 
 export interface ListingDetail extends Omit<ListingRowData, 'company' | 'images'> {
   description: string;
+  contactPhone: string | null;
   viewCount: number;
   images: Array<{ id: string; url: string; sortOrder: number }>;
   category: { id: string; name: string; slug: string };

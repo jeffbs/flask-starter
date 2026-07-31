@@ -10,6 +10,7 @@ import {
   View,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import * as Linking from 'expo-linking';
 import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import { api, ApiError } from '../../src/api';
 import { useAuth } from '../../src/auth';
@@ -209,6 +210,19 @@ export default function ListingDetailScreen() {
               </View>
             </Card>
           </Pressable>
+
+          {listing.contactPhone ? (
+            <Pressable
+              onPress={() => void Linking.openURL(`tel:${listing.contactPhone}`)}
+              accessibilityRole="link"
+              style={{ flexDirection: 'row', alignItems: 'center', gap: spacing.s }}
+            >
+              <Ionicons name="call-outline" size={18} color={c.accent} />
+              <Text style={[type.body, { color: c.accent, fontWeight: '600' }]}>
+                {listing.contactPhone}
+              </Text>
+            </Pressable>
+          ) : null}
 
           <SectionHeader title="Beschreibung" />
           <Text style={[type.body, { color: c.text, lineHeight: 22 }]}>{listing.description}</Text>

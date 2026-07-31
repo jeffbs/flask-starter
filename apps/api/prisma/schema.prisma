@@ -152,6 +152,7 @@ model Listing {
   zip            String
   city           String
   country        String        @default("DE")
+  contactPhone   String? // optionale Rückrufnummer (UI-Brief §6.4)
   lat            Float?
   lng            Float?
   status         ListingStatus @default(ACTIVE)

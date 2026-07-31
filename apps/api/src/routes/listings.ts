@@ -30,6 +30,7 @@ const createListingSchema = z.object({
   zip: z.string().min(3).max(10),
   city: z.string().min(2).max(100),
   country: z.string().length(2).default('DE'),
+  contactPhone: z.string().max(50).optional(),
   imageUrls: z.array(z.string()).max(20).default([]),
 });
 
@@ -70,7 +71,12 @@ export default async function listingRoutes(app: FastifyInstance) {
   app.get('/', { preHandler: [app.authenticate] }, async (req) => {
     const query = searchSchema.parse(req.query);
 
-    const where: Prisma.ListingWhereInput = { status: 'ACTIVE' };
+    // INS-5: abgelaufene Inserate sind unabhängig vom Sweep unsichtbar
+    // (eigenes AND, damit die Volltextsuche where.OR nicht kollidiert)
+    const where: Prisma.ListingWhereInput = {
+      status: 'ACTIVE',
+      AND: [{ OR: [{ expiresAt: null }, { expiresAt: { gt: new Date() } }] }],
+    };
     if (query.q) {
       where.OR = [
         { title: { contains: query.q, mode: 'insensitive' } },
@@ -173,6 +179,7 @@ export default async function listingRoutes(app: FastifyInstance) {
         zip: body.zip,
         city: body.city,
         country: body.country,
+        contactPhone: body.contactPhone,
         status: 'ACTIVE',
         publishedAt: now,
         expiresAt: new Date(now.getTime() + LISTING_TTL_DAYS * 24 * 60 * 60 * 1000),

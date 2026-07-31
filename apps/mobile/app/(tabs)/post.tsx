@@ -67,6 +67,7 @@ function PostForm({
   const [unit, setUnit] = useState('');
   const [zip, setZip] = useState(defaultZip);
   const [city, setCity] = useState(defaultCity);
+  const [contactPhone, setContactPhone] = useState('');
   const [busy, setBusy] = useState(false);
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const [error, setError] = useState<string | null>(null);
@@ -125,6 +126,7 @@ function PostForm({
           unit: unit.trim() || undefined,
           zip: zip.trim(),
           city: city.trim(),
+          contactPhone: contactPhone.trim() || undefined,
           imageUrls: urls,
         },
       });
@@ -318,6 +320,14 @@ function PostForm({
             <FormField label="Ort *" value={city} onChangeText={setCity} error={fieldErrors.city} />
           </View>
         </View>
+        <FormField
+          label="Telefon für Rückfragen"
+          value={contactPhone}
+          onChangeText={setContactPhone}
+          keyboardType="phone-pad"
+          placeholder="+49 …"
+          hint="Optional — wird im Inserat angezeigt"
+        />
 
         {error ? <Text style={[type.body, { color: c.danger }]}>{error}</Text> : null}
         <Button

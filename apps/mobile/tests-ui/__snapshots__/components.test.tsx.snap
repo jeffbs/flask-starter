@@ -1,0 +1,2306 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Variante danger 1`] = `
+<View
+  accessibilityRole="button"
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "borderRadius": 12,
+        "flexDirection": "row",
+        "gap": 8,
+        "justifyContent": "center",
+        "minHeight": 48,
+        "paddingHorizontal": 16,
+      },
+      {
+        "backgroundColor": "#b91c1c",
+        "opacity": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 17,
+          "fontWeight": "600",
+        },
+        {
+          "color": "#ffffff",
+        },
+      ]
+    }
+  >
+    Aktion
+  </Text>
+</View>
+`;
+
+exports[`Button Variante ghost 1`] = `
+<View
+  accessibilityRole="button"
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "borderRadius": 12,
+        "flexDirection": "row",
+        "gap": 8,
+        "justifyContent": "center",
+        "minHeight": 48,
+        "paddingHorizontal": 16,
+      },
+      {
+        "backgroundColor": "transparent",
+        "opacity": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 17,
+          "fontWeight": "600",
+        },
+        {
+          "color": "#1d7a4f",
+        },
+      ]
+    }
+  >
+    Aktion
+  </Text>
+</View>
+`;
+
+exports[`Button Variante primary 1`] = `
+<View
+  accessibilityRole="button"
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "borderRadius": 12,
+        "flexDirection": "row",
+        "gap": 8,
+        "justifyContent": "center",
+        "minHeight": 48,
+        "paddingHorizontal": 16,
+      },
+      {
+        "backgroundColor": "#1d7a4f",
+        "opacity": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 17,
+          "fontWeight": "600",
+        },
+        {
+          "color": "#ffffff",
+        },
+      ]
+    }
+  >
+    Aktion
+  </Text>
+</View>
+`;
+
+exports[`Button Variante secondary 1`] = `
+<View
+  accessibilityRole="button"
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "borderRadius": 12,
+        "flexDirection": "row",
+        "gap": 8,
+        "justifyContent": "center",
+        "minHeight": 48,
+        "paddingHorizontal": 16,
+      },
+      {
+        "backgroundColor": "#e3f3ea",
+        "opacity": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 17,
+          "fontWeight": "600",
+        },
+        {
+          "color": "#1d7a4f",
+        },
+      ]
+    }
+  >
+    Aktion
+  </Text>
+</View>
+`;
+
+exports[`Button deaktiviert und ladend 1`] = `
+<View
+  accessibilityRole="button"
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": true,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "borderRadius": 12,
+        "flexDirection": "row",
+        "gap": 8,
+        "justifyContent": "center",
+        "minHeight": 48,
+        "paddingHorizontal": 16,
+      },
+      {
+        "backgroundColor": "#1d7a4f",
+        "opacity": 0.5,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 17,
+          "fontWeight": "600",
+        },
+        {
+          "color": "#ffffff",
+        },
+      ]
+    }
+  >
+    Senden
+  </Text>
+</View>
+`;
+
+exports[`Button deaktiviert und ladend 2`] = `
+<View
+  accessibilityRole="button"
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": true,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "borderRadius": 12,
+        "flexDirection": "row",
+        "gap": 8,
+        "justifyContent": "center",
+        "minHeight": 48,
+        "paddingHorizontal": 16,
+      },
+      {
+        "backgroundColor": "#1d7a4f",
+        "opacity": 0.5,
+      },
+      undefined,
+    ]
+  }
+>
+  <ActivityIndicator
+    color="#ffffff"
+  />
+</View>
+`;
+
+exports[`EmptyState mit und ohne Aktion 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "flexGrow": 1,
+      "gap": 12,
+      "justifyContent": "center",
+      "padding": 32,
+    }
+  }
+>
+  <Text
+    allowFontScaling={false}
+    selectable={false}
+    style={
+      [
+        {
+          "color": "#68727d",
+          "fontSize": 44,
+        },
+        undefined,
+        {
+          "fontFamily": "ionicons",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        {},
+      ]
+    }
+  >
+    
+  </Text>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 17,
+          "fontWeight": "600",
+        },
+        {
+          "color": "#1a1d21",
+          "textAlign": "center",
+        },
+      ]
+    }
+  >
+    Keine Treffer
+  </Text>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 15,
+          "fontWeight": "400",
+        },
+        {
+          "color": "#68727d",
+          "textAlign": "center",
+        },
+      ]
+    }
+  >
+    Filter lockern?
+  </Text>
+  <View
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      [
+        {
+          "alignItems": "center",
+          "borderRadius": 12,
+          "flexDirection": "row",
+          "gap": 8,
+          "justifyContent": "center",
+          "minHeight": 48,
+          "paddingHorizontal": 16,
+        },
+        {
+          "backgroundColor": "#e3f3ea",
+          "opacity": 1,
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "fontSize": 17,
+            "fontWeight": "600",
+          },
+          {
+            "color": "#1d7a4f",
+          },
+        ]
+      }
+    >
+      Zurücksetzen
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`EmptyState mit und ohne Aktion 2`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "flexGrow": 1,
+      "gap": 12,
+      "justifyContent": "center",
+      "padding": 32,
+    }
+  }
+>
+  <Text
+    allowFontScaling={false}
+    selectable={false}
+    style={
+      [
+        {
+          "color": "#68727d",
+          "fontSize": 44,
+        },
+        undefined,
+        {
+          "fontFamily": "ionicons",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        {},
+      ]
+    }
+  >
+    
+  </Text>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 17,
+          "fontWeight": "600",
+        },
+        {
+          "color": "#1a1d21",
+          "textAlign": "center",
+        },
+      ]
+    }
+  >
+    Noch nichts gemerkt
+  </Text>
+</View>
+`;
+
+exports[`FormField mit Fehler und mit Hinweis 1`] = `
+<View
+  style={
+    {
+      "gap": 4,
+    }
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 13,
+          "fontWeight": "500",
+        },
+        {
+          "color": "#1a1d21",
+        },
+      ]
+    }
+  >
+    Titel
+  </Text>
+  <TextInput
+    onChangeText={[Function]}
+    placeholderTextColor="#68727d"
+    style={
+      [
+        {
+          "borderRadius": 12,
+          "borderWidth": 1,
+          "fontSize": 15,
+          "minHeight": 48,
+          "paddingHorizontal": 12,
+          "paddingVertical": 12,
+        },
+        {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#b91c1c",
+          "color": "#1a1d21",
+        },
+        null,
+        undefined,
+      ]
+    }
+    value=""
+  />
+  <Text
+    style={
+      [
+        {
+          "fontSize": 12,
+          "fontWeight": "400",
+        },
+        {
+          "color": "#b91c1c",
+        },
+      ]
+    }
+  >
+    Zu kurz
+  </Text>
+</View>
+`;
+
+exports[`FormField mit Fehler und mit Hinweis 2`] = `
+<View
+  style={
+    {
+      "gap": 4,
+    }
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 13,
+          "fontWeight": "500",
+        },
+        {
+          "color": "#1a1d21",
+        },
+      ]
+    }
+  >
+    PLZ
+  </Text>
+  <TextInput
+    onChangeText={[Function]}
+    placeholderTextColor="#68727d"
+    style={
+      [
+        {
+          "borderRadius": 12,
+          "borderWidth": 1,
+          "fontSize": 15,
+          "minHeight": 48,
+          "paddingHorizontal": 12,
+          "paddingVertical": 12,
+        },
+        {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#e4e7ec",
+          "color": "#1a1d21",
+        },
+        null,
+        undefined,
+      ]
+    }
+    value="44145"
+  />
+  <Text
+    style={
+      [
+        {
+          "fontSize": 12,
+          "fontWeight": "400",
+        },
+        {
+          "color": "#68727d",
+        },
+      ]
+    }
+  >
+    Pflichtfeld
+  </Text>
+</View>
+`;
+
+exports[`ListingRow (Brief §6.2) Standardzeile mit Bild und VB-netto-Preis 1`] = `
+<View
+  accessibilityRole="button"
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "borderRadius": 12,
+        "borderWidth": 1,
+        "flexDirection": "row",
+        "gap": 12,
+        "padding": 12,
+      },
+      {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#e4e7ec",
+        "opacity": 1,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      [
+        {
+          "borderRadius": 8,
+          "height": 96,
+          "justifyContent": "center",
+          "overflow": "hidden",
+          "width": 96,
+        },
+        {
+          "backgroundColor": "#e8eaee",
+        },
+      ]
+    }
+  >
+    <Image
+      resizeMode="cover"
+      source={
+        {
+          "uri": "https://example.test/foto.jpg",
+        }
+      }
+      style={
+        {
+          "height": "100%",
+          "width": "100%",
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      {
+        "flex": 1,
+        "gap": 3,
+        "opacity": 1,
+      }
+    }
+  >
+    <Text
+      numberOfLines={2}
+      style={
+        [
+          {
+            "fontSize": 15,
+            "fontWeight": "400",
+          },
+          {
+            "color": "#1a1d21",
+            "fontWeight": "500",
+          },
+        ]
+      }
+    >
+      Minibagger Kubota KX019-4, Bj. 2019
+    </Text>
+    <View
+      style={
+        {
+          "alignItems": "baseline",
+          "flexDirection": "row",
+          "gap": 8,
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "fontSize": 18,
+              "fontVariant": [
+                "tabular-nums",
+              ],
+              "fontWeight": "700",
+            },
+            {
+              "color": "#1a1d21",
+            },
+          ]
+        }
+      >
+        21.900 €
+      </Text>
+      <Text
+        style={
+          [
+            {
+              "fontSize": 12,
+              "fontWeight": "400",
+            },
+            {
+              "color": "#68727d",
+            },
+          ]
+        }
+      >
+        VB · netto
+      </Text>
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginTop": "auto",
+        }
+      }
+    >
+      <Text
+        numberOfLines={1}
+        style={
+          [
+            {
+              "fontSize": 12,
+              "fontWeight": "400",
+            },
+            {
+              "color": "#68727d",
+            },
+          ]
+        }
+      >
+        44145
+         
+        Dortmund
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ListingRow (Brief §6.2) mit Status-Badge (Merkliste/Meins): verkauft ausgegraut 1`] = `
+<View
+  accessibilityRole="button"
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "borderRadius": 12,
+        "borderWidth": 1,
+        "flexDirection": "row",
+        "gap": 12,
+        "padding": 12,
+      },
+      {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#e4e7ec",
+        "opacity": 1,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      [
+        {
+          "borderRadius": 8,
+          "height": 96,
+          "justifyContent": "center",
+          "overflow": "hidden",
+          "width": 96,
+        },
+        {
+          "backgroundColor": "#e8eaee",
+        },
+      ]
+    }
+  >
+    <Image
+      resizeMode="cover"
+      source={
+        {
+          "uri": "https://example.test/foto.jpg",
+        }
+      }
+      style={
+        {
+          "height": "100%",
+          "width": "100%",
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      {
+        "flex": 1,
+        "gap": 3,
+        "opacity": 0.6,
+      }
+    }
+  >
+    <Text
+      numberOfLines={2}
+      style={
+        [
+          {
+            "fontSize": 15,
+            "fontWeight": "400",
+          },
+          {
+            "color": "#1a1d21",
+            "fontWeight": "500",
+          },
+        ]
+      }
+    >
+      Minibagger Kubota KX019-4, Bj. 2019
+    </Text>
+    <View
+      style={
+        {
+          "alignItems": "baseline",
+          "flexDirection": "row",
+          "gap": 8,
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "fontSize": 18,
+              "fontVariant": [
+                "tabular-nums",
+              ],
+              "fontWeight": "700",
+            },
+            {
+              "color": "#1a1d21",
+            },
+          ]
+        }
+      >
+        21.900 €
+      </Text>
+      <Text
+        style={
+          [
+            {
+              "fontSize": 12,
+              "fontWeight": "400",
+            },
+            {
+              "color": "#68727d",
+            },
+          ]
+        }
+      >
+        VB · netto
+      </Text>
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginTop": "auto",
+        }
+      }
+    >
+      <Text
+        numberOfLines={1}
+        style={
+          [
+            {
+              "fontSize": 12,
+              "fontWeight": "400",
+            },
+            {
+              "color": "#68727d",
+            },
+          ]
+        }
+      >
+        44145
+         
+        Dortmund
+      </Text>
+      <View
+        style={
+          [
+            {
+              "alignSelf": "flex-start",
+              "borderRadius": 999,
+              "paddingHorizontal": 8,
+              "paddingVertical": 3,
+            },
+            {
+              "backgroundColor": "#e8e9fb",
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "fontSize": 12,
+                "fontWeight": "400",
+              },
+              {
+                "color": "#3730a3",
+                "fontWeight": "600",
+              },
+            ]
+          }
+        >
+          Verkauft
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ListingRow (Brief §6.2) ohne Bild, Preis auf Anfrage, Mengenangabe 1`] = `
+<View
+  accessibilityRole="button"
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "borderRadius": 12,
+        "borderWidth": 1,
+        "flexDirection": "row",
+        "gap": 12,
+        "padding": 12,
+      },
+      {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#e4e7ec",
+        "opacity": 1,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      [
+        {
+          "borderRadius": 8,
+          "height": 96,
+          "justifyContent": "center",
+          "overflow": "hidden",
+          "width": 96,
+        },
+        {
+          "backgroundColor": "#e8eaee",
+        },
+      ]
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      selectable={false}
+      style={
+        [
+          {
+            "color": "#68727d",
+            "fontSize": 28,
+          },
+          {
+            "alignSelf": "center",
+          },
+          {
+            "fontFamily": "ionicons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+  <View
+    style={
+      {
+        "flex": 1,
+        "gap": 3,
+        "opacity": 1,
+      }
+    }
+  >
+    <Text
+      numberOfLines={2}
+      style={
+        [
+          {
+            "fontSize": 15,
+            "fontWeight": "400",
+          },
+          {
+            "color": "#1a1d21",
+            "fontWeight": "500",
+          },
+        ]
+      }
+    >
+      Minibagger Kubota KX019-4, Bj. 2019
+    </Text>
+    <View
+      style={
+        {
+          "alignItems": "baseline",
+          "flexDirection": "row",
+          "gap": 8,
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "fontSize": 18,
+              "fontVariant": [
+                "tabular-nums",
+              ],
+              "fontWeight": "700",
+            },
+            {
+              "color": "#1a1d21",
+            },
+          ]
+        }
+      >
+        Preis auf Anfrage
+      </Text>
+    </View>
+    <Text
+      style={
+        [
+          {
+            "fontSize": 12,
+            "fontWeight": "400",
+          },
+          {
+            "color": "#68727d",
+          },
+        ]
+      }
+    >
+      200
+       
+      Stück
+    </Text>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginTop": "auto",
+        }
+      }
+    >
+      <Text
+        numberOfLines={1}
+        style={
+          [
+            {
+              "fontSize": 12,
+              "fontWeight": "400",
+            },
+            {
+              "color": "#68727d",
+            },
+          ]
+        }
+      >
+        44145
+         
+        Dortmund
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`OfferCard (Preisvorschlag, Brief §6.6) angenommen / abgelehnt / zurückgezogen → keine Aktionen 1`] = `
+<View
+  style={
+    [
+      {
+        "borderRadius": 12,
+        "borderWidth": 1,
+        "gap": 8,
+        "maxWidth": "85%",
+        "padding": 16,
+      },
+      {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#e4e7ec",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 13,
+          "fontWeight": "500",
+        },
+        {
+          "color": "#68727d",
+        },
+      ]
+    }
+  >
+    Preisvorschlag
+  </Text>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 26,
+          "fontVariant": [
+            "tabular-nums",
+          ],
+          "fontWeight": "700",
+        },
+        {
+          "color": "#1a1d21",
+        },
+      ]
+    }
+  >
+    19.500 €
+  </Text>
+  <View
+    style={
+      [
+        {
+          "alignSelf": "flex-start",
+          "borderRadius": 999,
+          "paddingHorizontal": 8,
+          "paddingVertical": 3,
+        },
+        {
+          "backgroundColor": "#e3f3ea",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "fontSize": 12,
+            "fontWeight": "400",
+          },
+          {
+            "color": "#1d7a4f",
+            "fontWeight": "600",
+          },
+        ]
+      }
+    >
+      Angenommen
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`OfferCard (Preisvorschlag, Brief §6.6) angenommen / abgelehnt / zurückgezogen → keine Aktionen 2`] = `
+<View
+  style={
+    [
+      {
+        "borderRadius": 12,
+        "borderWidth": 1,
+        "gap": 8,
+        "maxWidth": "85%",
+        "padding": 16,
+      },
+      {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#e4e7ec",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 13,
+          "fontWeight": "500",
+        },
+        {
+          "color": "#68727d",
+        },
+      ]
+    }
+  >
+    Preisvorschlag
+  </Text>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 26,
+          "fontVariant": [
+            "tabular-nums",
+          ],
+          "fontWeight": "700",
+        },
+        {
+          "color": "#1a1d21",
+        },
+      ]
+    }
+  >
+    19.500 €
+  </Text>
+  <View
+    style={
+      [
+        {
+          "alignSelf": "flex-start",
+          "borderRadius": 999,
+          "paddingHorizontal": 8,
+          "paddingVertical": 3,
+        },
+        {
+          "backgroundColor": "#fdeaea",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "fontSize": 12,
+            "fontWeight": "400",
+          },
+          {
+            "color": "#b91c1c",
+            "fontWeight": "600",
+          },
+        ]
+      }
+    >
+      Abgelehnt
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`OfferCard (Preisvorschlag, Brief §6.6) angenommen / abgelehnt / zurückgezogen → keine Aktionen 3`] = `
+<View
+  style={
+    [
+      {
+        "borderRadius": 12,
+        "borderWidth": 1,
+        "gap": 8,
+        "maxWidth": "85%",
+        "padding": 16,
+      },
+      {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#e4e7ec",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 13,
+          "fontWeight": "500",
+        },
+        {
+          "color": "#68727d",
+        },
+      ]
+    }
+  >
+    Preisvorschlag
+  </Text>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 26,
+          "fontVariant": [
+            "tabular-nums",
+          ],
+          "fontWeight": "700",
+        },
+        {
+          "color": "#1a1d21",
+        },
+      ]
+    }
+  >
+    19.500 €
+  </Text>
+  <View
+    style={
+      [
+        {
+          "alignSelf": "flex-start",
+          "borderRadius": 999,
+          "paddingHorizontal": 8,
+          "paddingVertical": 3,
+        },
+        {
+          "backgroundColor": "#e8eaee",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "fontSize": 12,
+            "fontWeight": "400",
+          },
+          {
+            "color": "#68727d",
+            "fontWeight": "600",
+          },
+        ]
+      }
+    >
+      Zurückgezogen
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`OfferCard (Preisvorschlag, Brief §6.6) offen, eigener → Zurückziehen 1`] = `
+<View
+  style={
+    [
+      {
+        "borderRadius": 12,
+        "borderWidth": 1,
+        "gap": 8,
+        "maxWidth": "85%",
+        "padding": 16,
+      },
+      {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#e4e7ec",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 13,
+          "fontWeight": "500",
+        },
+        {
+          "color": "#68727d",
+        },
+      ]
+    }
+  >
+    Ihr Preisvorschlag
+  </Text>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 26,
+          "fontVariant": [
+            "tabular-nums",
+          ],
+          "fontWeight": "700",
+        },
+        {
+          "color": "#1a1d21",
+        },
+      ]
+    }
+  >
+    19.500 €
+  </Text>
+  <View
+    style={
+      [
+        {
+          "alignSelf": "flex-start",
+          "borderRadius": 999,
+          "paddingHorizontal": 8,
+          "paddingVertical": 3,
+        },
+        {
+          "backgroundColor": "#fdf1e0",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "fontSize": 12,
+            "fontWeight": "400",
+          },
+          {
+            "color": "#b45309",
+            "fontWeight": "600",
+          },
+        ]
+      }
+    >
+      Offen
+    </Text>
+  </View>
+  <View
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      [
+        {
+          "alignItems": "center",
+          "borderRadius": 12,
+          "flexDirection": "row",
+          "gap": 8,
+          "justifyContent": "center",
+          "minHeight": 48,
+          "paddingHorizontal": 16,
+        },
+        {
+          "backgroundColor": "transparent",
+          "opacity": 1,
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "fontSize": 17,
+            "fontWeight": "600",
+          },
+          {
+            "color": "#1d7a4f",
+          },
+        ]
+      }
+    >
+      Zurückziehen
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`OfferCard (Preisvorschlag, Brief §6.6) offen, fremd → Annehmen/Ablehnen 1`] = `
+<View
+  style={
+    [
+      {
+        "borderRadius": 12,
+        "borderWidth": 1,
+        "gap": 8,
+        "maxWidth": "85%",
+        "padding": 16,
+      },
+      {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#e4e7ec",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 13,
+          "fontWeight": "500",
+        },
+        {
+          "color": "#68727d",
+        },
+      ]
+    }
+  >
+    Preisvorschlag
+  </Text>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 26,
+          "fontVariant": [
+            "tabular-nums",
+          ],
+          "fontWeight": "700",
+        },
+        {
+          "color": "#1a1d21",
+        },
+      ]
+    }
+  >
+    19.500 €
+  </Text>
+  <View
+    style={
+      [
+        {
+          "alignSelf": "flex-start",
+          "borderRadius": 999,
+          "paddingHorizontal": 8,
+          "paddingVertical": 3,
+        },
+        {
+          "backgroundColor": "#fdf1e0",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "fontSize": 12,
+            "fontWeight": "400",
+          },
+          {
+            "color": "#b45309",
+            "fontWeight": "600",
+          },
+        ]
+      }
+    >
+      Offen
+    </Text>
+  </View>
+  <View
+    style={
+      {
+        "flexDirection": "row",
+        "gap": 8,
+        "marginTop": 4,
+      }
+    }
+  >
+    <View
+      accessibilityRole="button"
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        [
+          {
+            "alignItems": "center",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "gap": 8,
+            "justifyContent": "center",
+            "minHeight": 48,
+            "paddingHorizontal": 16,
+          },
+          {
+            "backgroundColor": "#1d7a4f",
+            "opacity": 1,
+          },
+          {
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "fontSize": 17,
+              "fontWeight": "600",
+            },
+            {
+              "color": "#ffffff",
+            },
+          ]
+        }
+      >
+        Annehmen
+      </Text>
+    </View>
+    <View
+      accessibilityRole="button"
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        [
+          {
+            "alignItems": "center",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "gap": 8,
+            "justifyContent": "center",
+            "minHeight": 48,
+            "paddingHorizontal": 16,
+          },
+          {
+            "backgroundColor": "#e3f3ea",
+            "opacity": 1,
+          },
+          {
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "fontSize": 17,
+              "fontWeight": "600",
+            },
+            {
+              "color": "#1d7a4f",
+            },
+          ]
+        }
+      >
+        Ablehnen
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`StatusChip Angebots-Status ACCEPTED 1`] = `
+<View
+  style={
+    [
+      {
+        "alignSelf": "flex-start",
+        "borderRadius": 999,
+        "paddingHorizontal": 8,
+        "paddingVertical": 3,
+      },
+      {
+        "backgroundColor": "#e3f3ea",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 12,
+          "fontWeight": "400",
+        },
+        {
+          "color": "#1d7a4f",
+          "fontWeight": "600",
+        },
+      ]
+    }
+  >
+    Angenommen
+  </Text>
+</View>
+`;
+
+exports[`StatusChip Angebots-Status DECLINED 1`] = `
+<View
+  style={
+    [
+      {
+        "alignSelf": "flex-start",
+        "borderRadius": 999,
+        "paddingHorizontal": 8,
+        "paddingVertical": 3,
+      },
+      {
+        "backgroundColor": "#fdeaea",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 12,
+          "fontWeight": "400",
+        },
+        {
+          "color": "#b91c1c",
+          "fontWeight": "600",
+        },
+      ]
+    }
+  >
+    Abgelehnt
+  </Text>
+</View>
+`;
+
+exports[`StatusChip Angebots-Status PENDING 1`] = `
+<View
+  style={
+    [
+      {
+        "alignSelf": "flex-start",
+        "borderRadius": 999,
+        "paddingHorizontal": 8,
+        "paddingVertical": 3,
+      },
+      {
+        "backgroundColor": "#fdf1e0",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 12,
+          "fontWeight": "400",
+        },
+        {
+          "color": "#b45309",
+          "fontWeight": "600",
+        },
+      ]
+    }
+  >
+    Offen
+  </Text>
+</View>
+`;
+
+exports[`StatusChip Angebots-Status WITHDRAWN 1`] = `
+<View
+  style={
+    [
+      {
+        "alignSelf": "flex-start",
+        "borderRadius": 999,
+        "paddingHorizontal": 8,
+        "paddingVertical": 3,
+      },
+      {
+        "backgroundColor": "#e8eaee",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 12,
+          "fontWeight": "400",
+        },
+        {
+          "color": "#68727d",
+          "fontWeight": "600",
+        },
+      ]
+    }
+  >
+    Zurückgezogen
+  </Text>
+</View>
+`;
+
+exports[`StatusChip Inserats-Status ACTIVE 1`] = `
+<View
+  style={
+    [
+      {
+        "alignSelf": "flex-start",
+        "borderRadius": 999,
+        "paddingHorizontal": 8,
+        "paddingVertical": 3,
+      },
+      {
+        "backgroundColor": "#e3f3ea",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 12,
+          "fontWeight": "400",
+        },
+        {
+          "color": "#1d7a4f",
+          "fontWeight": "600",
+        },
+      ]
+    }
+  >
+    Aktiv
+  </Text>
+</View>
+`;
+
+exports[`StatusChip Inserats-Status EXPIRED 1`] = `
+<View
+  style={
+    [
+      {
+        "alignSelf": "flex-start",
+        "borderRadius": 999,
+        "paddingHorizontal": 8,
+        "paddingVertical": 3,
+      },
+      {
+        "backgroundColor": "#e8e9fb",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 12,
+          "fontWeight": "400",
+        },
+        {
+          "color": "#3730a3",
+          "fontWeight": "600",
+        },
+      ]
+    }
+  >
+    Abgelaufen
+  </Text>
+</View>
+`;
+
+exports[`StatusChip Inserats-Status PAUSED 1`] = `
+<View
+  style={
+    [
+      {
+        "alignSelf": "flex-start",
+        "borderRadius": 999,
+        "paddingHorizontal": 8,
+        "paddingVertical": 3,
+      },
+      {
+        "backgroundColor": "#fdf1e0",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 12,
+          "fontWeight": "400",
+        },
+        {
+          "color": "#b45309",
+          "fontWeight": "600",
+        },
+      ]
+    }
+  >
+    Pausiert
+  </Text>
+</View>
+`;
+
+exports[`StatusChip Inserats-Status REMOVED 1`] = `
+<View
+  style={
+    [
+      {
+        "alignSelf": "flex-start",
+        "borderRadius": 999,
+        "paddingHorizontal": 8,
+        "paddingVertical": 3,
+      },
+      {
+        "backgroundColor": "#fdeaea",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 12,
+          "fontWeight": "400",
+        },
+        {
+          "color": "#b91c1c",
+          "fontWeight": "600",
+        },
+      ]
+    }
+  >
+    Entfernt
+  </Text>
+</View>
+`;
+
+exports[`StatusChip Inserats-Status SOLD 1`] = `
+<View
+  style={
+    [
+      {
+        "alignSelf": "flex-start",
+        "borderRadius": 999,
+        "paddingHorizontal": 8,
+        "paddingVertical": 3,
+      },
+      {
+        "backgroundColor": "#e8e9fb",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 12,
+          "fontWeight": "400",
+        },
+        {
+          "color": "#3730a3",
+          "fontWeight": "600",
+        },
+      ]
+    }
+  >
+    Verkauft
+  </Text>
+</View>
+`;
+
+exports[`VerifiedBadge (KYB-Siegel) verifiziert → Siegel, unverifiziert → nichts 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "alignSelf": "flex-start",
+        "borderRadius": 999,
+        "flexDirection": "row",
+        "gap": 4,
+        "paddingHorizontal": 8,
+        "paddingVertical": 2,
+      },
+      {
+        "backgroundColor": "#e3f3ea",
+      },
+    ]
+  }
+>
+  <Text />
+  <Text
+    style={
+      [
+        {
+          "fontSize": 12,
+          "fontWeight": "400",
+        },
+        {
+          "color": "#1d7a4f",
+          "fontWeight": "600",
+        },
+      ]
+    }
+  >
+    Geprüfte Firma
+  </Text>
+</View>
+`;
+
+exports[`VerifiedBadge (KYB-Siegel) verifiziert → Siegel, unverifiziert → nichts 2`] = `null`;
