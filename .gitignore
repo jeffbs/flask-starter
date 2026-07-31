@@ -34,3 +34,4 @@ apps/api/prisma/*.db
 *.p12
 *.key
 *.mobileprovision
+docker-compose.override.yml

@@ -1,0 +1,8 @@
+node_modules
+**/node_modules
+.git
+apps/api/uploads
+apps/api/dist
+apps/backoffice/dist
+.expo
+*.log

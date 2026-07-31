@@ -1,3 +1,24 @@
+# Entwicklungs-Stack: kompletter Marktplatz in Docker, Code als Bind-Mount.
+#
+#   docker compose up            → DB + API + Backoffice
+#   docker compose --profile mobile up   → zusätzlich Expo-Dev-Server
+#
+# Der Quellcode ist live in die Container gemountet (Hot-Reload überall);
+# node_modules liegen in Named Volumes, damit Host- und Container-Stände
+# sich nicht gegenseitig überschreiben. Nach Änderungen an package.json:
+#   docker compose run --rm deps
+
+x-dev-base: &dev-base
+  build:
+    context: .
+    dockerfile: Dockerfile.dev
+  volumes:
+    - .:/app
+    - node_modules:/app/node_modules
+    - api_node_modules:/app/apps/api/node_modules
+    - backoffice_node_modules:/app/apps/backoffice/node_modules
+    - mobile_node_modules:/app/apps/mobile/node_modules
+
 services:
   db:
     image: postgres:16-alpine
@@ -10,6 +31,72 @@ services:
       - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U b2b -d b2bmarkt"]
+      interval: 3s
+      timeout: 3s
+      retries: 15
+
+  # Einmaliger Installations-Schritt — verhindert, dass mehrere Services
+  # gleichzeitig in dasselbe node_modules-Volume installieren.
+  deps:
+    <<: *dev-base
+    command: npm install --no-audit --no-fund
+
+  api:
+    <<: *dev-base
+    command: sh -c "npx -w apps/api prisma migrate deploy && npx -w apps/api prisma generate && npm run seed -w apps/api && npm run dev -w apps/api"
+    environment:
+      DATABASE_URL: postgresql://b2b:b2b@db:5432/b2bmarkt?schema=public
+      JWT_SECRET: ${JWT_SECRET:-dev-secret-change-me}
+      PORT: 4000
+      HOST: 0.0.0.0
+      # Basis-URL, unter der Geräte/Browser die Upload-Dateien erreichen
+      PUBLIC_BASE_URL: ${PUBLIC_BASE_URL:-http://localhost:4000}
+    ports:
+      - "4000:4000"
+    depends_on:
+      db:
+        condition: service_healthy
+      deps:
+        condition: service_completed_successfully
+
+  backoffice:
+    <<: *dev-base
+    command: npm run dev -w apps/backoffice -- --host 0.0.0.0
+    environment:
+      # Vite-Proxy-Ziel: der API-Container (siehe apps/backoffice/vite.config.ts)
+      API_PROXY_TARGET: http://api:4000
+    ports:
+      - "5173:5173"
+    depends_on:
+      api:
+        condition: service_started
+      deps:
+        condition: service_completed_successfully
+
+  # Expo-Dev-Server (optional): docker compose --profile mobile up
+  # Damit Expo Go auf dem Handy den Metro-Bundler findet, die LAN-IP des
+  # Hosts setzen: REACT_NATIVE_PACKAGER_HOSTNAME=192.168.x.y (.env-Datei).
+  # EXPO_PUBLIC_API_URL muss ebenfalls auf die Host-IP zeigen.
+  mobile:
+    <<: *dev-base
+    profiles: ["mobile"]
+    command: npm run start -w apps/mobile -- --host lan
+    environment:
+      REACT_NATIVE_PACKAGER_HOSTNAME: ${REACT_NATIVE_PACKAGER_HOSTNAME:-}
+      EXPO_PUBLIC_API_URL: ${EXPO_PUBLIC_API_URL:-http://localhost:4000}
+    ports:
+      - "8081:8081"
+    depends_on:
+      api:
+        condition: service_started
+      deps:
+        condition: service_completed_successfully
 
 volumes:
   pgdata:
+  node_modules:
+  api_node_modules:
+  backoffice_node_modules:
+  mobile_node_modules:
