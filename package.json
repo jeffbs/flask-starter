@@ -17,5 +17,8 @@
   },
   "engines": {
     "node": ">=20"
+  },
+  "overrides": {
+    "@types/react": "~19.0.10"
   }
 }
